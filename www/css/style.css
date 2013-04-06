@@ -1,0 +1,409 @@
+@font-face
+{
+	font-family: Icons;
+	src:url(../fonts/icons.ttf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face
+{
+	font-family: Text;
+	src:url(../fonts/Handlee.ttf);
+	font-weight: normal;
+  	font-style: normal;
+}
+
+body {
+	background-image:url(../pics/background.jpg);
+	background-repeat:repeat;
+	font-family: Text;
+	color:#FFF;
+	font-size:1em;
+}
+ul, li {
+	list-style:none;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul, li, button {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);	
+}
+
+.container {
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
+#wrapper {
+	position:relative;
+	width:200%;
+	height:100%;
+	/*left:-100%;*/
+}
+
+#loadingView {
+	position:absolute;
+	left:0;
+	top:0;
+	
+	width:50%;
+	overflow:hidden;
+	text-align:center;
+}
+#loadingView > img {
+	width:90%;
+	height:auto;
+	margin: 0 auto;
+}
+#loadingView > h2 {
+	font-size:2em;
+}
+
+#gameWindow {
+	position:absolute;
+	top:0;
+	left:50%;
+	
+	width:50%;
+	height: 100%;
+	
+	overflow:hidden;
+}
+
+#gameWindow > #wrapper {
+	position:relative;
+	width:250%;
+	height:100%;
+	left:-75%;
+}
+
+#leftView {
+	font-family:Text;
+	position:absolute;
+	top:0;
+	left:0;
+	width:30%;
+	height:100%;
+	background-image:url(../pics/gray_jean/gray_jean.png);
+	background-repeat:repeat;
+	border-right:2px solid #333;
+	box-sizing:border-box;
+}
+
+#leftView h3, #rightView h3 {
+	width:100%;
+	padding:0.2em;
+	margin:0;
+	box-sizing:border-box;
+	overflow:hidden;
+	
+	letter-spacing:0.1em;
+	text-transform:uppercase;
+	font-weight:100;
+	line-height:2.5em;
+	font-size:1em;
+	
+	background-color: #444;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+}
+#leftView h4, #rightView h4 {
+	width:100%;
+	padding:0.2em;
+	padding-left:1em;
+	margin:0;
+	box-sizing:border-box;
+	overflow:hidden;
+	
+	letter-spacing:0.1em;
+	text-transform:uppercase;
+	font-weight:100;
+	line-height:2em;
+	font-size:0.7em;
+	
+	background-color: #333;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+}
+
+#leftView button, #rightView button {
+	width:90%;
+	margin:5%;
+	padding-top:1em;
+	box-sizing:border-box;
+	overflow:hidden;
+	
+	font-family: Text;
+	letter-spacing:0.1em;
+	font-weight:100;
+	font-size:1em;
+	
+	background-color: #333;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+	
+	border-radius:1em;
+	-moz-border-radius:1em;
+}
+
+#leftView li, #rightView li{
+	box-sizing:border-box;
+	padding-left:1em;
+	padding-top:0.2em;
+	padding-bottom:0.2em;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #000;
+}
+
+.icon {
+	font-family: Icons;
+	font-size:2em;
+	float:left;
+	margin-left:0.3em;
+	text-transform:none;
+	font-style:normal;
+	font-weight:lighter;
+}
+
+/*
+	RIGHTVIEW
+*/
+
+#rightView {
+	font-family:Text;
+	position:absolute;
+	top:0;
+	right:0;
+	background-image:url(../pics/gray_jean/gray_jean.png);
+	background-repeat:repeat;
+	border-left: 2px #333 solid;
+	width:30%;
+	height:100%;
+	overflow-x:hidden;
+}
+
+input[type=text] {
+	font-family: Text;
+	width:90%;
+	margin-left:5%;
+	margin-top:0.5em;
+	margin-bottom: 0.5em;
+	
+	box-sizing: border-box;
+	border: 2px solid #333;
+	padding:0.5em;
+	
+	color: #222;
+	text-align:center;
+	letter-spacing:0.2em;
+	
+	-webkit-user-select: auto !important;
+}
+
+.ListStyle > li {
+	width:90%;
+	margin-left:5%;
+	margin-top:0.5em;
+	margin-bottom: 0.5em;
+	box-sizing: border-box;
+	border: 1px solid #111;
+	border-radius:2em;
+	-moz-border-radius:2em;
+	padding:0.5em;
+	
+	color: #222;
+	text-align:center;
+	letter-spacing:0.1em;
+}
+/*
+	GAMEVIEW
+*/
+
+#gameView {
+	position:absolute;
+	top:0;
+	left:30%;
+	width:40%;
+	height:100%;
+}
+#gameView > nav {
+	position:absolute;
+	top:0;
+	width:100%;
+	height:4em;
+	text-align:center;
+}
+#gameView > nav > label {
+	font-size:3.5em;
+}
+/*
+	FOOTER
+*/
+#gameView footer {
+	position:absolute;
+	height:5em;
+	right:1%;
+	bottom:1em;
+}
+/*
+	GAMELIST
+*/
+.gameList {
+	position:absolute;
+	top:6.5em;
+	width:150%;
+	bottom:6em;
+	overflow-x:hidden;
+}
+.gameList > ul > li {
+	padding:1em;
+	background-image: url("../pics/gray_jean/gray_jean.png");
+	background-repeat:repeat;
+	overflow:hidden;
+	box-sizing: border-box;
+	border-top: 2px solid #fff;
+	border-bottom: 1px solid #999;
+}
+.gameList > ul > li  div {
+	display: inline-block;
+	vertical-align:top;
+}
+.gameList > ul > li  > div:first-child {
+	margin-right:5%;
+	padding-right:5%;
+	border-right:1px dotted #999;
+	text-align: center;
+	box-sizing: border-box;
+}
+.gameList icon {
+	font-family: Icons;
+	font-size:5em;
+	color: #888;
+}
+.gameList icon[id=loadingIcon] {
+	display:none;
+}
+.gameList date {
+	color: #888;
+	display: block;
+}
+.gameList h3 {
+	margin:0;
+	font-size:1.7em;
+	color: #222;
+}
+.gamerStat {
+	font-size:1.1em;
+	color: #333;
+}
+.gamerStat > li > div:first-child {
+	width:4.5em;
+}
+/*
+	BUTTONS
+*/
+
+/* BUTTON STYLES */
+button {
+	background-color:transparent;
+	border:none;
+	
+	color:#FFF;
+}
+button icon {
+	font-family: Icons;
+	font-size:4em;
+}
+button div {
+	font-family: Text;
+	font-size:1.5em;
+	position:relative;
+	margin-top:-0.2em;
+}
+/* --- */
+#toOptions {
+	position:absolute;
+	left:1%;
+}
+
+#toCreate {
+	position:absolute;
+	right:1%;
+}
+
+.activeLi {
+	background-color:#333;
+	color:#fff !important;
+}
+/*
+	WORLDMAP STYLES AND VIEWS
+*/
+.worldmap {
+	position: absolute;
+}
+.visir {
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:4998;
+}
+#flag, #userflag {
+	position:absolute;
+	z-index:4997;
+	width:2em;
+	height:4em;
+}
+#flag > icon, #userflag > icon  {
+	font-family: Icons;
+	font-size:4em;
+	
+	position:relative;
+	left:-71%;
+	top:-83%;
+}
+
+#userflag > icon {
+	color:#999;
+}
+
+#questionBox {
+	position: fixed;
+	z-index:5000;
+	left:0;
+	top:0;
+	width: 100%;
+	
+	background-image: url("../pics/gray_jean/gray_jean.png");
+	
+	text-align:center;
+	color:#111;
+	font-size:2em;
+	padding:0.5em;
+	box-sizing: border-box;
+	
+	display:none;
+}
+#gameNav {
+	position:fixed;
+	z-index:4999;
+	bottom:0;
+	right:0;
+	width: 100%;
+	
+	text-align:center;
+	box-sizing: border-box;
+	
+	background-image: url("../pics/gray_jean/gray_jean.png");
+	
+	display: none;
+}
+#gameNav > button {
+	color:#111;
+}

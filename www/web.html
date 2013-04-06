@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>GeoQ</title><meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;" />
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">	
+    <link rel="stylesheet" href="css/animations.css">
+        
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/preloading.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/earth.js"></script>
+    <script src="js/games.js"></script>
+  	<script type="text/javascript">
+  	function init()
+	{
+		//localStorage Variablen erstellen
+		if(localStorage.setItem('deviceName',"") == null)
+		{
+			localStorage.setItem('deviceName',"htc_pyramid");
+		}
+		if(localStorage.setItem('deviceCordova',"") == null)
+		{
+			localStorage.setItem('deviceCordova',"");
+		}
+		if(localStorage.setItem('devicePlatform',"") == null)
+		{
+			localStorage.setItem('devicePlatform',"");
+		}
+		if(localStorage.setItem('deviceUUID',"") == null)
+		{
+			localStorage.setItem('deviceUUID',"979ab63c8eb70c24");
+		}
+		if(localStorage.setItem('deviceModel',"") == null)
+		{
+			localStorage.setItem('deviceModel',"");
+		}
+		if(localStorage.setItem('deviceVersion',"") == null)
+		{
+			localStorage.setItem('deviceVersion',"");
+		}
+		if(localStorage.setItem('game_tb',"") == null)
+		{
+			localStorage.setItem('game_tb',"");
+		}
+		if(localStorage.setItem('process_tb',"") == null)
+		{
+			localStorage.setItem('process_tb',"");
+		}
+		if(localStorage.setItem('user_tb',"") == null)
+		{
+			localStorage.setItem('user_tb',"");
+		}
+		if(localStorage.setItem('userID',"") == null)
+		{
+			localStorage.setItem('userID',"");
+		}
+		//
+		status();
+	}
+	</script>
+    </head>
+    <body onload="init()">
+    <div class="container">
+    
+    	<div id="wrapper">
+        
+            <!-- PRELOADING FILES FROM WEB OR CREATING FIRST LOCAL ACCOUNT -->
+            <div id="loadingView">
+                <img src="pics/logo.png">
+                <h2>Loading...</h2>
+            </div>
+			
+			<div id="gameWindow">
+				<div id="wrapper">
+					<div id="leftView">
+						<h3 id="OnlineNickname"><div class="icon">.</div></h3>
+                        <h3 id="CreateOnlineAccount"><div class="icon">F</div>Create Online Account</h3>
+						<input style="display:none" type="text" id="newNickname" placeholder="enter your nickname"></input>
+                    	<h3><div class="icon">d</div>find Friend</h3>
+						<input type="text" id="newFriendname" placeholder="nickname of friend"></input>
+                        <button id="findFriend"><div class="icon">S</div>find Friend</button>
+					</div>
+				
+					<div id="gameView">
+						<nav>
+							<button id="toOptions">
+								<icon>o</icon>
+								<div>Options</div>
+							</button>
+							<label>GeoQ</label>
+							<button id="toCreate">
+								<icon>B</icon>
+								<div>new Game</div>
+							</button>
+						</nav>
+						
+						<div id="gameList" class="gameList">
+							<ul>
+								<li>
+									<div>
+										<icon>6</icon>
+										<date>20.05.13</date>
+									</div>
+									<div>
+										<h3>Der Menschenfresser</h3>
+										<ul class="gamerStat">
+											<li>
+												<div>5321 m</div>
+												<div>Harald Mogul</div>
+											</li>
+											<li>
+												<div>632 m</div>
+												<div>Viktor der Schwer schwachkofp</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div>
+										<icon>6</icon>
+									</div>
+									<div>
+										<h3>Der Menschenfresser</h3>
+										<ul class="gamerStat">
+											<li>
+												<div>5321 m</div>
+												<div>Harald Mogul</div>
+											</li>
+											<li>
+												<div>632 m</div>
+												<div>Viktor der Schwer schwachkofp</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div>
+										<icon>6</icon>
+									</div>
+									<div>
+										<h3>Der Menschenfresser</h3>
+										<ul class="gamerStat">
+											<li>
+												<div>5321 m</div>
+												<div>Harald Mogul</div>
+											</li>
+											<li>
+												<div>632 m</div>
+												<div>Viktor der Schwer schwachkofp</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div>
+										<icon>6</icon>
+									</div>
+									<div>
+										<h3>Der Menschenfresser</h3>
+										<ul class="gamerStat">
+											<li>
+												<div>5321 m</div>
+												<div>Harald Mogul</div>
+											</li>
+											<li>
+												<div>632 m</div>
+												<div>Viktor der Schwer schwachkofp</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+						<footer>
+							<button id="reloadView">
+								<icon>e</icon>
+								<div>reload View</div>
+							</button>
+						</footer>
+					</div>
+					
+					<div id="rightView">
+						<h3 style="display:none"><div class="icon">d</div>find Game</h3>
+						<input style="display:none" type="text" id="findGame" placeholder="name of game"></input>
+						<h3><div class="icon">&</div>create Game</h3>
+						<input type="text" id="newGameTitle" placeholder="game title"></input>
+                        <h4><div class="icon">&</div>Game Type</h4>
+                        <ul id="TypeSelection" class="ListStyle">
+                        	<li value="0">Singleplayer</li>
+                            <li value="1">Mulitplayer</li>
+                        </ul>
+                        <h4><div class="icon">&</div>How much Questions?</h4>
+                        <ul id="AmountSelection" class="ListStyle">
+                        	<li value="5">5 - Questions</li>
+                            <li value="10">10 - Questions</li>
+                            <li value="15">15 - Questions</li>
+                        </ul>
+                        <h4><div class="icon">&</div>Catagory</h4>
+                        <ul id="CategorySelection" class="ListStyle">
+                        	<li>Capital Cities</li>
+                            <li>Big Cities</li>
+                            <li>Football Stadiums</li>
+                        </ul>
+						<h4><div class="icon">7</div>invite Friends</h4>
+                        <ul id="FriendSelection" class="ListStyle">
+                        	<li>Hans</li>
+                            <li>Roland</li>
+                            <li>Ludwig</li>
+                        </ul>
+                        <button id="createNewGame"><div class="icon">S</div>create Game</button>
+					</div>
+				</div>
+			</div>
+            
+        </div><!-- wrapper -->
+    </div>
+	<!-- Positionsvisir für die Suche -->
+	<canvas id="visir" class="visir" width="500" height="500" style="display:none;"></canvas>
+    
+    <div id='flag' style="display:none"><icon>2</icon></div>
+    <div id='userflag' style="display:none"><icon>2</icon></div>
+	
+	<div id="questionBox"></div>
+	
+	<div id="gameNav">
+    	<button id="BackToGameView">
+			<icon>T</icon>
+			<div>Back</div>
+		</button>
+		<button id="showAnswer">
+			<icon>u</icon>
+			<div>Show Answer</div>
+		</button>
+        <button id="NextQuestion">
+			<icon>H</icon>
+			<div>Next</div>
+		</button>
+	</div>
+	
+	<!-- Container für die Weltkarte -->
+	<div id="map" class="worldmap">
+		<!--
+		<img id="worldmap" class="worldmap" src="map/-90_90_-72_72.png">
+		-->
+	</div>
+	</body>
+
+</html>

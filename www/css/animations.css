@@ -1,0 +1,231 @@
+/*
+	ANIMATIONS
+*/
+@-webkit-keyframes translateToGameView {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(-50%); }
+}
+
+@-moz-keyframes translateToGameView {
+  0% { -moz-transform: translateX(0%); }
+  100% { -moz-transform: translateX(-50%); }
+}
+
+@-o-keyframes translateToGameView {
+  0% { -o-transform: translateX(0%); }
+  100% { -o-transform: translateX(-50%); }
+}
+
+@keyframes translateToGameView {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+/* 
+	Die Animation hat das Bild auf dem Android zu weit verschoben?!
+	Aktuell ist di Animation nur entfernt und nicht gelöscht!
+	Irgendwann kann sie reaktiviert werden
+*/
+.translateToGameView {
+	/*
+	-webkit-animation-name: translateToGameView;
+	-moz-animation-name: translateToGameView;
+	-o-animation-name: translateToGameView;
+	animation-name: translateToGameView;
+	
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+	*/
+	left: -100%;
+}
+
+@-webkit-keyframes toOptions {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(30%); }
+}
+
+@-moz-keyframes toOptions {
+  0% { -moz-transform: translateX(0%); }
+  100% { -moz-transform: translateX(30%); }
+}
+
+@-o-keyframes toOptions {
+  0% { -o-transform: translateX(0%); }
+  100% { -o-transform: translateX(30%); }
+}
+
+@keyframes toOptions {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(30%); }
+}
+
+.toOptions {
+	-webkit-animation-name: toOptions;
+	-moz-animation-name: toOptions;
+	-o-animation-name: toOptions;
+	animation-name: toOptions;
+	
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;	
+}
+
+
+@-webkit-keyframes backOptions {
+  0% { -webkit-transform: translateX(30%); }
+  100% { -webkit-transform: translateX(0%); }
+}
+
+@-moz-keyframes backOptions {
+  0% { -moz-transform: translateX(30%); }
+  100% { -moz-transform: translateX(0%); }
+}
+
+@-o-keyframes backOptions {
+  0% { -o-transform: translateX(30%); }
+  100% { -o-transform: translateX(0%); }
+}
+
+@keyframes backOptions {
+  0% { transform: translateX(30%); }
+  100% { transform: translateX(0%); }
+}
+
+.backOptions {
+	-webkit-animation-name: backOptions;
+	-moz-animation-name: backOptions;
+	-o-animation-name: backOptions;
+	animation-name: backOptions;
+	
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;	
+}
+
+@-webkit-keyframes toCreate {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(-30%); }
+}
+
+@-moz-keyframes toCreate {
+  0% { -moz-transform: translateX(0%); }
+  100% { -moz-transform: translateX(-30%); }
+}
+
+@-o-keyframes toCreate {
+  0% { -o-transform: translateX(0%); }
+  100% { -o-transform: translateX(-30%); }
+}
+
+@keyframes toCreate {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-30%); }
+}
+
+.toCreate {
+	-webkit-animation-name: toCreate;
+	-moz-animation-name: toCreate;
+	-o-animation-name: toCreate;
+	animation-name: toCreate;
+	
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+
+@-webkit-keyframes backCreate {
+  0% { -webkit-transform: translateX(-30%); }
+  100% { -webkit-transform: translateX(0%); }
+}
+
+@-moz-keyframes backCreate {
+  0% { -moz-transform: translateX(-30%); }
+  100% { -moz-transform: translateX(0%); }
+}
+
+@-o-keyframes backCreate {
+  0% { -o-transform: translateX(-30%); }
+  100% { -o-transform: translateX(0%); }
+}
+
+@keyframes backCreate {
+  0% { transform: translateX(-30%); }
+  100% { transform: translateX(0%); }
+}
+
+.backCreate {
+	-webkit-animation-name: backCreate;
+	-moz-animation-name: backCreate;
+	-o-animation-name: backCreate;
+	animation-name: backCreate;
+	
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+
+/*
+	WIRD GENUTZ um den DOM neu zu laden -- WORKAROUND
+*/
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); }	
+	50% { -webkit-transform: scale(1.1); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulse {
+    0% { -moz-transform: scale(1); }	
+	50% { -moz-transform: scale(1.1); }
+    100% { -moz-transform: scale(1); }
+}
+@-o-keyframes pulse {
+    0% { -o-transform: scale(1); }	
+	50% { -o-transform: scale(1.1); }
+    100% { -o-transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }	
+	50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+	-webkit-animation-name: pulse;
+	-moz-animation-name: pulse;
+	-o-animation-name: pulse;
+	animation-name: pulse;
+	
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
