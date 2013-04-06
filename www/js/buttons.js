@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
-	document.getElementById('toOptions').addEventListener('click', toOptions);
-	document.getElementById('toCreate').addEventListener('click', toCreate);
+	//document.getElementById('toOptions').addEventListener('click', toOptions);
+	//document.getElementById('toCreate').addEventListener('click', toCreate);
 	
 	document.getElementById('toOptions').addEventListener('touchstart', toOptions);
 	/*$('#toOptions').on('click',*/ 
