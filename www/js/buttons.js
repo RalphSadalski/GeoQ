@@ -7,6 +7,8 @@ $(document).ready(function() {
 	
 	function toOptions(e) 
 	{
+		console.log(calcTime() + ' - toOptions');
+		
   		e.preventDefault();
 		
 		var hasClass = $('#gameWindow > #wrapper').hasClass('toOptions');
