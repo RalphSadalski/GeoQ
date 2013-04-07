@@ -1,13 +1,17 @@
+var starttime = 0;
 // Wait for Cordova to load
 //
 function init() {
-	console.log("init...");
+	starttime = new Date();
+	console.log("onInit");
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 
 // Cordova is ready
 //
 function onDeviceReady() {
+	
+	console.log('onDeviceReady');
 	//localStorage Variablen erstellen
 	if(localStorage.setItem('deviceName',"") == null)
 	{
