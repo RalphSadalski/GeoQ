@@ -3,7 +3,7 @@ var starttime = 0;
 //
 function init() {
 	starttime = new Date();
-	console.log("onInit");
+	console.log("000 - onInit");
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 
@@ -11,7 +11,7 @@ function init() {
 //
 function onDeviceReady() {
 	
-	console.log('onDeviceReady');
+	console.log(calcTime() + ' - onDeviceReady');
 	//localStorage Variablen erstellen
 	if(localStorage.setItem('deviceName',"") == null)
 	{
@@ -62,4 +62,13 @@ function onDeviceReady() {
 	localStorage.setItem('deviceUUID',device.uuid);
 	localStorage.setItem('deviceModel',device.model);
 	localStorage.setItem('deviceVersion',device.version);
+}
+
+function calcTime()
+{
+	var now = new Date();
+	
+	var d = (now - starttime) / 1000;
+	
+	return d;
 }
