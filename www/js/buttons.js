@@ -4,7 +4,7 @@ $(document).ready(function() {
 	//document.getElementById('toCreate').addEventListener('click', toCreate);
 	
 	document.getElementById('toOptions').addEventListener('touchstart', toOptions);
-	/*$('#toOptions').on('click',*/ 
+	
 	function toOptions(e) 
 	{
   		e.preventDefault();
