@@ -32,6 +32,8 @@ $(document).ready(function() {
 	document.getElementById('toCreate').addEventListener('touchstart', toCreate);
 	function toCreate (e)
 	{
+		console.log(calcTime() + ' - toCreate');
+		
 		e.preventDefault();
 		
 		var hasClass = $('#gameWindow > #wrapper').hasClass('toCreate');
