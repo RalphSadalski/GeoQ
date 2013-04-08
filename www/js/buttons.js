@@ -7,7 +7,7 @@ $(document).ready(function() {
 	
 	function toOptions(e) 
 	{
-		console.log(calcTime() + ' - toOptions');
+		//calcTime('toOptions');
 		
   		e.preventDefault();
 		
@@ -32,7 +32,7 @@ $(document).ready(function() {
 	document.getElementById('toCreate').addEventListener('touchstart', toCreate);
 	function toCreate (e)
 	{
-		console.log(calcTime() + ' - toCreate');
+		//calcTime('toCreate');
 		
 		e.preventDefault();
 		
