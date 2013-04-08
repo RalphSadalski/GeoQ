@@ -6,15 +6,15 @@ $(document).ready(function() {
 	document.getElementById('toOptions').addEventListener('touchstart', toOptions);
 	
 	function toOptions(e) 
-	{
-		calcTime('toOptions');
-		
+	{		
   		e.preventDefault();
 		
 		var hasClass = $('#gameWindow > #wrapper').hasClass('toOptions');
 		
 		if(hasClass)
 		{
+			calcTime('#backOptions');
+			
 			$('#gameWindow > #wrapper').removeClass('toOptions');
 			$('#gameWindow > #wrapper').removeClass('toCreate');
 			$('#gameWindow > #wrapper').removeClass('backCreate');
@@ -22,6 +22,8 @@ $(document).ready(function() {
 		}
 		else
 		{
+			calcTime('#toOptions');
+			
 			$('#gameWindow > #wrapper').removeClass('backOptions');
 			$('#gameWindow > #wrapper').removeClass('toCreate');
 			$('#gameWindow > #wrapper').removeClass('backCreate');
@@ -31,15 +33,15 @@ $(document).ready(function() {
 	
 	document.getElementById('toCreate').addEventListener('touchstart', toCreate);
 	function toCreate (e)
-	{
-		calcTime('toCreate');
-		
+	{		
 		e.preventDefault();
 		
 		var hasClass = $('#gameWindow > #wrapper').hasClass('toCreate');
 		
 		if(hasClass)
 		{
+			calcTime('#backCreate');
+			
 			$('#gameWindow > #wrapper').removeClass('toCreate');
 			$('#gameWindow > #wrapper').removeClass('backOptions');
 			$('#gameWindow > #wrapper').removeClass('toOptions');
@@ -47,6 +49,8 @@ $(document).ready(function() {
 		}
 		else
 		{
+			calcTime('#toCreate');
+			
 			$('#gameWindow > #wrapper').removeClass('backCreate');
 			$('#gameWindow > #wrapper').removeClass('backOptions');
 			$('#gameWindow > #wrapper').removeClass('toOptions');
@@ -56,9 +60,8 @@ $(document).ready(function() {
 	
 	$('#reloadView').on('click', function ()
 	{
+		calcTime('#reloadView');
 		createList();
-		
-		alert(logging);
 	});
 	
 	$('#AmountSelection li').on('click', function ()
@@ -112,6 +115,7 @@ $(document).ready(function() {
 	//Funktion zum erstellen einen neuen Spiels
 	$('#createNewGame').click(function () 
 	{
+		calcTime('#createNewGame');
 		var success = true;
 		
 		var multiplayerIDs = new Array();
@@ -161,13 +165,15 @@ $(document).ready(function() {
 		
 		var name 		= $('#newGameTitle').val();
 		
+		calcTime('name: ' + name + ', type: ' + type + ', amount: ' + amount + ', multiplayerIDs: ' + multiplayerIDs + ', catagory: ' + catagory);
+		
 		if(name != "" && type != "undefined" && amount != "undefined" && catagory != "")
 		{
 			var newGame = addGame(name, type, amount, multiplayerIDs, catagory);
 		}
 		else
 		{
-			showAlert('Daten unvollständig');
+			calcTime('#createNewGame - fehlende Daten');
 		}	
 	});
 	
@@ -181,11 +187,11 @@ $(document).ready(function() {
 		{					
 			if(searchFriend(searchString) == true)
 			{
-				showAlert(searchString + ' got your new friend.');
+				//
 			}
 			else
 			{
-				showAlert(searchString + " isn't registrated.");
+				//showAlert(searchString + " isn't registrated.");
 			}
 		}
 	});
@@ -209,6 +215,9 @@ $(document).ready(function() {
 		}
 		
 		$('#showAnswer').css('display', 'none');
+		
+		$('#questionBox').css('top', '-1px');
+		$('#questionBox').css('top', '0px');
 	});
 	
 	$('#NextQuestion').on('click', function ()
