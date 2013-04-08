@@ -165,7 +165,7 @@ $(document).ready(function() {
 		
 		var name 		= $('#newGameTitle').val();
 		
-		calcTime('name: ' + name + ', type: ' + type + ', amount: ' + amount + ', multiplayerIDs: ' + multiplayerIDs + ', catagory: ' + catagory);
+		//calcTime('name: ' + name + ', type: ' + type + ', amount: ' + amount + ', multiplayerIDs: ' + multiplayerIDs + ', catagory: ' + catagory);
 		
 		if(name != "" && type != "undefined" && amount != "undefined" && catagory != "")
 		{
@@ -191,7 +191,7 @@ $(document).ready(function() {
 			}
 			else
 			{
-				//showAlert(searchString + " isn't registrated.");
+				calcTime('#findFriend - failed');
 			}
 		}
 	});
@@ -215,9 +215,6 @@ $(document).ready(function() {
 		}
 		
 		$('#showAnswer').css('display', 'none');
-		
-		$('#questionBox').css('top', '-1px');
-		$('#questionBox').css('top', '0px');
 	});
 	
 	$('#NextQuestion').on('click', function ()
@@ -237,7 +234,7 @@ $(document).ready(function() {
 
 function quitGameView()
 {
-	console.log("I've caught a back key");
+	calcTime('Hardwarebutton - backbutton released');
 		
 	// We are going back to home so remove the event listener 
 	// so the default back key behaviour will take over
