@@ -74,6 +74,7 @@ function calcTime(msg)
 	var d = (now - starttime) / 1000;
 	
 	console.log(d + ' - ' + msg);
+	alert(d + ' - ' + msg);
 	
 	logging[] = new Array();
 	logging[]['time'] = d;
