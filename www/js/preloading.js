@@ -29,11 +29,11 @@ function status()
 	if(progress < 100 || localStorage.getItem('userID') == "")
 	{
 		var restart = setTimeout(function() { status() }, 1000);
-		calcTime('status restarted');
+		//calcTime('status restarted');
 	}
 	else
 	{
-		calcTime('status left');
+		//calcTime('status left');
 		
 		createList();
 		createFriendList();
@@ -45,7 +45,7 @@ function status()
 //GET USER ID FROM USER_TB
 function getUserID()
 {
-	calcTime("getUserID");
+	//calcTime("getUserID");
 	
 	var phpurl  = 'http://www.ralphsadalski.de/worldmap/php/getUserID.php';
 	
@@ -64,13 +64,13 @@ function getUserID()
 			async:false,
 			beforeSend: function ()
 			{
-				calcTime('getUserID - beforeSend');
+				//calcTime('getUserID - beforeSend');
 			},
 			success: function(data)
 			{
 				if(data.userID != 0)
 				{
-					calcTime('getUserID - success');
+					//calcTime('getUserID - success');
 					
 					localStorage.setItem('userID', data.userID);
 					
@@ -78,12 +78,12 @@ function getUserID()
 				}
 				else
 				{
-					calcTime('getUserID - wrong data');
+					//calcTime('getUserID - wrong data');
 				}
 			},
 			error: function()
 			{
-				calcTime('getUserID - error');
+				//calcTime('getUserID - error');
 			}
 		});
 	}
@@ -91,7 +91,7 @@ function getUserID()
 
 function getUserJSON(userID)
 {
-	calcTime('getUserJSON');
+	//calcTime('getUserJSON');
 	
 	if(userID > 0)
 	{
@@ -107,11 +107,11 @@ function getUserJSON(userID)
 			async:false,
 			beforeSend: function ()
 			{
-				calcTime('getUserJSON - beforeSend');
+				//calcTime('getUserJSON - beforeSend');
 			},
 			success: function(data)
 			{
-				calcTime('getUserJSON - success');
+				//calcTime('getUserJSON - success');
 				
 				localStorage.setItem("process_tb", JSON.stringify(data.process_tb));
 				localStorage.setItem("game_tb", JSON.stringify(data.game_tb));
@@ -124,13 +124,13 @@ function getUserJSON(userID)
 			},
 			error: function()
 			{
-				calcTime('getUserJSON - error');
+				//calcTime('getUserJSON - error');
 			}
 		});
 	}
 	else
 	{	
-		calcTime('getUserJSON - no userID');
+		//calcTime('getUserJSON - no userID');
 	}
 }
 
