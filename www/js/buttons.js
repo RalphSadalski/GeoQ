@@ -57,6 +57,8 @@ $(document).ready(function() {
 	$('#reloadView').on('click', function ()
 	{
 		createList();
+		
+		alert(logging);
 	});
 	
 	$('#AmountSelection li').on('click', function ()
