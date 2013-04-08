@@ -76,6 +76,6 @@ function calcTime(msg)
 	console.log(d + ' - ' + msg);
 	alert(d + ' - ' + msg);
 	
-	logging[]['time'] = d;
-	logging[]['message'] = msg;
+	//logging[]['time'] = d;
+	//logging[]['message'] = msg;
 }
