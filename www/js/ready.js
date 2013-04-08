@@ -1,5 +1,5 @@
 var starttime 	= 0;
-var logging	= new Array();
+var logging	= new Array(new Array());
 // Wait for Cordova to load
 //
 function init()
@@ -76,7 +76,6 @@ function calcTime(msg)
 	console.log(d + ' - ' + msg);
 	alert(d + ' - ' + msg);
 	
-	logging[] = new Array();
 	logging[]['time'] = d;
 	logging[]['message'] = msg;
 }
