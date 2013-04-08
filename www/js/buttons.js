@@ -60,7 +60,12 @@ $(document).ready(function() {
 	
 	$('#reloadView').on('click', function ()
 	{
+<<<<<<< HEAD
 		calcTime('#reloadView');
+=======
+		console.log('#reloadView clicked');
+		
+>>>>>>> update
 		createList();
 	});
 	

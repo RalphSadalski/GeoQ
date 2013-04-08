@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>onclick vs ontouchstart</title>
+  <style type="text/css">
+  *{
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  body{
+    margin: 0 auto;
+    width: 80%;
+  }
+  a{
+    border: 1px solid #333;
+    color: #333;
+    display: block;
+    margin: 10px auto;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+  }
+  a#touchstartcss:active,
+  #reset:active,
+  a.active{
+    background: #666;
+    color: #EEE;
+  }
+  #reset{
+    float: right;
+  }
+  </style>
+</head>
+<body>
+<strong id="notouchstart">This device does not support touchstart.</strong>
+<a href="javascript:;" id="click">Click</a>
+<a href="javascript:;" id="touchstart">touchstart</a>
+<a href="javascript:;" id="touchstartcss">touchstart w/ css</a>
+<a href="javascript:;" ontouchstart="reset()" id="reset">Reset</a>
+<div id="delay_report"></div>
+
+<script type="text/javascript">
+
+var a = document.getElementById('click'), b = document.getElementById('touchstart'), c = document.getElementById('touchstartcss'), d = document.getElementById('delay_report'),start = 0;
+
+//Check for touchstart
+if('ontouchstart' in document.documentElement)
+{
+	document.getElementById("notouchstart").style.display = "none";
+}
+
+//Add a listener that fires at the beginning of each interaction
+[a,b,c].forEach(function(el){el.addEventListener('touchstart',interact);});
+
+//Add the event handlers for each button
+a.addEventListener('click',highlight);
+b.addEventListener('touchstart',highlight);
+c.addEventListener('touchstart',highlight);
+
+//Functions
+//Store the time when the user initiated an action
+function interact(e) {
+  start = new Date();
+}
+//Highlight what the user selected and calculate how long it took the action to occur
+function highlight(e) {
+  e.preventDefault();
+  e.currentTarget.className="active";
+  if(start) {d.innerHTML = "Delay: " + ((new Date()) - start) + "ms";}
+  start = null;
+}
+//Reset the demo
+function reset() {
+  [a,b,c].forEach(function(el){el.className="";d.innerHTML=""});
+}
+</script>
+
+</body>
+</html>

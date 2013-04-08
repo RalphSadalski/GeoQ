@@ -2,6 +2,8 @@ var newMap = null;
 
 function createList ()
 {
+	console.log('createList loaded');
+	
 	var games = JSON.parse(localStorage.getItem('process_tb'));
 	
 	var len = games.length;
