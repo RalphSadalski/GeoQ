@@ -1,10 +1,12 @@
-var starttime = 0;
+var starttime 	= 0;
+var logging	= new Array();
 // Wait for Cordova to load
 //
 function init()
 {
 	starttime = new Date();
-	console.log("000 - onInit");
+	calcTime('onInit');
+	
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 
@@ -12,8 +14,7 @@ function init()
 //
 function onDeviceReady()
 {
-	alert(calcTime());
-	console.log(calcTime() + ' - onDeviceReady');
+	calcTime('onDeviceReady');
 	//localStorage Variablen erstellen
 	if(localStorage.setItem('deviceName',"") == null)
 	{
@@ -66,11 +67,15 @@ function onDeviceReady()
 	localStorage.setItem('deviceVersion',device.version);
 }
 
-function calcTime()
+function calcTime(msg)
 {
 	var now = new Date();
 	
 	var d = (now - starttime) / 1000;
 	
-	return d;
+	console.log(d + ' - ' + msg);
+	
+	logging[] = new Array();
+	logging[]['time'] = d;
+	logging[]['message'] = msg;
 }
