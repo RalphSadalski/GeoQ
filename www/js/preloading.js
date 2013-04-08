@@ -1,6 +1,8 @@
 //CHECK EACH SECOND FOR PRELOADING STATUS
 function status()
 {
+	calcTime('status');
+	
 	var allItems = localStorage.length;
 	var counter = 0;
 	var progress = 0;
@@ -27,10 +29,12 @@ function status()
 	if(progress < 100 || localStorage.getItem('userID') == "")
 	{
 		var restart = setTimeout(function() { status() }, 1000);
+		calcTime('status restarted');
 	}
 	else
 	{
-	
+		calcTime('status left');
+		
 		createList();
 		createFriendList();
 		createCatagoryList();
@@ -41,6 +45,8 @@ function status()
 //GET USER ID FROM USER_TB
 function getUserID()
 {
+	calcTime("getUserID");
+	
 	var phpurl  = 'http://www.ralphsadalski.de/worldmap/php/getUserID.php';
 	
 	var devicename = localStorage.getItem('deviceName');
@@ -56,19 +62,28 @@ function getUserID()
 			jsonp: 'jsoncallback',
 			timeout: 5000,
 			async:false,
+			beforeSend: function ()
+			{
+				calcTime('getUserID - beforeSend');
+			},
 			success: function(data)
 			{
 				if(data.userID != 0)
 				{
+					calcTime('getUserID - success');
+					
 					localStorage.setItem('userID', data.userID);
 					
 					getUserJSON(data.userID);
-				}			
+				}
+				else
+				{
+					calcTime('getUserID - wrong data');
+				}
 			},
 			error: function()
 			{
-				showAlert('Keine Verbindung zum Server möglich.');
-				//output.text('There was an error loading the data.');
+				calcTime('getUserID - error');
 			}
 		});
 	}
@@ -76,6 +91,8 @@ function getUserID()
 
 function getUserJSON(userID)
 {
+	calcTime('getUserJSON');
+	
 	if(userID > 0)
 	{
 		var phpurl  = 'http://www.ralphsadalski.de/worldmap/php/getUserJSON.php';
@@ -88,8 +105,14 @@ function getUserJSON(userID)
 			jsonp: 'jsoncallback',
 			timeout: 5000,
 			async:false,
+			beforeSend: function ()
+			{
+				calcTime('getUserJSON - beforeSend');
+			},
 			success: function(data)
 			{
+				calcTime('getUserJSON - success');
+				
 				localStorage.setItem("process_tb", JSON.stringify(data.process_tb));
 				localStorage.setItem("game_tb", JSON.stringify(data.game_tb));
 				localStorage.setItem("user_tb", JSON.stringify(data.user_tb));
@@ -101,13 +124,13 @@ function getUserJSON(userID)
 			},
 			error: function()
 			{
-				showAlert('Keine Verbindung zum Server möglich.');
+				calcTime('getUserJSON - error');
 			}
 		});
 	}
 	else
 	{	
-		showAlert('No ID.');
+		calcTime('getUserJSON - no userID');
 	}
 }
 
