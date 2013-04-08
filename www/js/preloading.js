@@ -1,7 +1,7 @@
 //CHECK EACH SECOND FOR PRELOADING STATUS
 function status()
 {
-	calcTime('status');
+	//calcTime('status');
 	
 	var allItems = localStorage.length;
 	var counter = 0;
