@@ -6,8 +6,6 @@ function init()
 {
 	starttime = new Date();
 	calcTime('onInit');
-
-	document.addEventListener("deviceready", onDeviceReady, false);
 	
 	viewManager.initialize();
 }
