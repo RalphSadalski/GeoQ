@@ -1,0 +1,152 @@
+<div id="wrapper">
+        
+            <!-- PRELOADING FILES FROM WEB OR CREATING FIRST LOCAL ACCOUNT -->
+            <div id="loadingView">
+                <img src="pics/logo.png">
+                <h2>Loading...</h2>
+            </div>
+
+  		<div id="gameWindow">
+				<div id="wrapper">
+					<div id="leftView">
+						<h3 id="OnlineNickname"><div class="icon">.</div></h3>
+                        <h3 id="CreateOnlineAccount"><div class="icon">F</div>Create Online Account</h3>
+						<input style="display:none" type="text" id="newNickname" placeholder="enter your nickname"></input>
+                    	<h3><div class="icon">d</div>find Friend</h3>
+						<input type="text" id="newFriendname" placeholder="nickname of friend"></input>
+                        <button id="findFriend"><div class="icon">S</div>find Friend</button>
+					</div>
+
+					<div id="gameView">
+						<nav>
+							<button id="toOptions">
+								<icon>o</icon>
+								<div>Options</div>
+							</button>
+							<label>GeoQ</label>
+							<button id="toCreate">
+								<icon>B</icon>
+								<div>new Game</div>
+							</button>
+						</nav>
+
+						<div id="gameList" class="gameList">
+							<ul>
+								<li>
+									<div>
+										<icon>6</icon>
+										<date>20.05.13</date>
+									</div>
+									<div>
+										<h3>Der Menschenfresser</h3>
+										<ul class="gamerStat">
+											<li>
+												<div>5321 m</div>
+												<div>Harald Mogul</div>
+											</li>
+											<li>
+												<div>632 m</div>
+												<div>Viktor der Schwer schwachkofp</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div>
+										<icon>6</icon>
+									</div>
+									<div>
+										<h3>Der Menschenfresser</h3>
+										<ul class="gamerStat">
+											<li>
+												<div>5321 m</div>
+												<div>Harald Mogul</div>
+											</li>
+											<li>
+												<div>632 m</div>
+												<div>Viktor der Schwer schwachkofp</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div>
+										<icon>6</icon>
+									</div>
+									<div>
+										<h3>Der Menschenfresser</h3>
+										<ul class="gamerStat">
+											<li>
+												<div>5321 m</div>
+												<div>Harald Mogul</div>
+											</li>
+											<li>
+												<div>632 m</div>
+												<div>Viktor der Schwer schwachkofp</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div>
+										<icon>6</icon>
+									</div>
+									<div>
+										<h3>Der Menschenfresser</h3>
+										<ul class="gamerStat">
+											<li>
+												<div>5321 m</div>
+												<div>Harald Mogul</div>
+											</li>
+											<li>
+												<div>632 m</div>
+												<div>Viktor der Schwer schwachkofp</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<footer>
+							<button id="reloadView">
+								<icon>e</icon>
+								<div>reload View</div>
+							</button>
+						</footer>
+					</div>
+
+					<div id="rightView">
+						<h3 style="display:none"><div class="icon">d</div>find Game</h3>
+						<input style="display:none" type="text" id="findGame" placeholder="name of game"></input>
+						<h3><div class="icon">&</div>create Game</h3>
+						<input type="text" id="newGameTitle" placeholder="game title"></input>
+                        <h4><div class="icon">&</div>Game Type</h4>
+                        <ul id="TypeSelection" class="ListStyle">
+                        	<li value="0">Singleplayer</li>
+                            <li value="1">Mulitplayer</li>
+                        </ul>
+                        <h4><div class="icon">&</div>How much Questions?</h4>
+                        <ul id="AmountSelection" class="ListStyle">
+                        	<li value="5">5 - Questions</li>
+                            <li value="10">10 - Questions</li>
+                            <li value="15">15 - Questions</li>
+                        </ul>
+                        <h4><div class="icon">&</div>Catagory</h4>
+                        <ul id="CategorySelection" class="ListStyle">
+                        	<li>Capital Cities</li>
+                            <li>Big Cities</li>
+                            <li>Football Stadiums</li>
+                        </ul>
+						<h4><div class="icon">7</div>invite Friends</h4>
+                        <ul id="FriendSelection" class="ListStyle">
+                        	<li>Hans</li>
+                            <li>Roland</li>
+                            <li>Ludwig</li>
+                        </ul>
+                        <button id="createNewGame"><div class="icon">S</div>create Game</button>
+					</div>
+				</div>
+			</div>
+            
+        </div><!-- wrapper -->
