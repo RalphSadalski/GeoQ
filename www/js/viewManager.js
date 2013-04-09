@@ -33,7 +33,14 @@ var viewManager = {
 		    	var duration = now - time;
 		    	
 		    	calcTime('loadView: "' + localURL + '", Duration: ' + duration + ' ms');
+		    },
+		    error: function ()
+		    {
+		    	var now = new Date();
+		    	var duration = now - time;
+		    	
+		    	calcTime('loadView: "' + localURL + '" failed, Duration: ' + duration + ' ms');
 		    }
-		})
+		});
 	}
 }
