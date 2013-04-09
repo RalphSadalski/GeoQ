@@ -2,6 +2,8 @@ var viewManager = {
 	initialize: function ()
 	{
 		this.ListView();
+		
+		document.addEventListener("deviceready", onDeviceReady, false);
 	},
 	
 	ListView : function ()
