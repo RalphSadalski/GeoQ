@@ -1,7 +1,7 @@
 var viewManager = {
 	initialize: function ()
 	{
-		
+		this.ListView();
 	},
 	
 	ListView : function ()
