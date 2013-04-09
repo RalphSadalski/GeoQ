@@ -38,6 +38,8 @@ function status()
 		createList();
 		createFriendList();
 		createCatagoryList();
+		
+		alert($('#wrapper'));
 
 		$('#wrapper').addClass('translateToGameView');
 	}
