@@ -31,8 +31,8 @@ var viewManager = {
 			    	localStorage.setItem(localURL, view);
 			    	Storage = localStorage.getItem(localURL);
 			    	
-			        $(body).empty();
-				$(body).append(Storage);
+			        $('body').empty();
+				$('body').append(Storage);
 			    },
 			    complete: function()
 			    {
@@ -52,8 +52,8 @@ var viewManager = {
 		}
 		else
 		{
-			$(body).empty();
-			$(body).append(Storage);
+			$('body').empty();
+			$('body').append(Storage);
 			
 			var now = new Date();
 			var duration = now - time;
