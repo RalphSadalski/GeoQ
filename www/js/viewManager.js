@@ -9,6 +9,8 @@ var viewManager = {
 	ListView : function ()
 	{
 		this.loadView('ListView.html');
+		
+		alert('ListView');
 	},
 	
 	loadView : function (localURL)
@@ -35,6 +37,8 @@ var viewManager = {
 			    	
 			        $('body').empty();
 				$('body').append(Storage);
+				
+				alert('OK');
 			    },
 			    complete: function()
 			    {
