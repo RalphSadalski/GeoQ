@@ -1,0 +1,5 @@
+var viewManager = {
+  initilize: function () {
+
+  }
+}
