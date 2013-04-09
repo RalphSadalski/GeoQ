@@ -8,6 +8,8 @@ function init()
 	calcTime('onInit');
 
 	document.addEventListener("deviceready", onDeviceReady, false);
+	
+	viewManager.ListView();
 }
 
 // Cordova is ready
