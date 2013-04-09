@@ -9,7 +9,7 @@ function init()
 
 	document.addEventListener("deviceready", onDeviceReady, false);
 	
-	viewManager.ListView();
+	viewManager.initialize();
 }
 
 // Cordova is ready
