@@ -143,41 +143,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-
-	$('#showAnswer').on('click', function ()
-	{
-		newMap.showFlag(gameObject.questionObject.Latitude,gameObject.questionObject.Longitude);
-		newMap.showFlagUser();
-
-		gameObject.saveAnswers();
-
-		var isFinished = gameObject.isFinished();
-
-		if(isFinished)
-		{
-			$('#questionBox').html('You have finished this game with an average distance of ' + gameObject.getAverage(gameObject.Antworten) + ' km.');
-		}
-		else
-		{
-			$('#NextQuestion').css('display', 'inline-block');
-		}
-
-		$('#showAnswer').css('display', 'none');
-	});
-
-	$('#NextQuestion').on('click', function ()
-	{
-		gameObject.getNextQuestion();
-
-		$('#NextQuestion').css('display', 'none');
-		newMap.hideFlag();
-		$('#showAnswer').css('display', 'inline-block');
-	});
-
-	$('#BackToGameView').on('click', function ()
-	{
-		gameObject.endGame();
-	});
 });
 
 function toOptions(e) 
