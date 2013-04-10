@@ -38,8 +38,6 @@ function status()
 		createList();
 		createFriendList();
 		createCatagoryList();
-		
-		alert($('#wrapper'));
 
 		$('#wrapper').addClass('translateToGameView');
 	}
@@ -150,8 +148,6 @@ function showAlert (message)
 		alert(title ? (title + ": " + message) : message);
 	}
 }
-<<<<<<< HEAD
-=======
 /*
 	BIG FUNCTION FOR LOGGING ALL IMPORTENT THINGS
 */
@@ -170,4 +166,3 @@ function calcTime(msg)
 
 	logging.push(log);
 }
->>>>>>> update

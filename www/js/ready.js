@@ -5,11 +5,7 @@ function init()
 	starttime = new Date();
 	calcTime('onInit');
 	
-<<<<<<< HEAD
-	viewManager.initialize();
-=======
 	document.addEventListener("deviceready", onDeviceReady, false);
->>>>>>> update
 }
 
 // Cordova is ready
@@ -67,21 +63,5 @@ function onDeviceReady()
 	localStorage.setItem('deviceUUID',device.uuid);
 	localStorage.setItem('deviceModel',device.model);
 	localStorage.setItem('deviceVersion',device.version);
-<<<<<<< HEAD
+
 }
-
-function calcTime(msg)
-{
-	var now = new Date();
-
-	var d = (now - starttime) / 1000;
-
-	console.log(d + ' - ' + msg);
-
-	var log = {'time' : d, 'msg' : msg};
-
-	logging.push(log);
-}
-=======
-}
->>>>>>> update
