@@ -141,7 +141,7 @@ function showAlert (message)
 
 	if (navigator.notification)
 	{
-		navigator.notification.alert(message, null, title, 'OK');
+		navigator.notification.alert(message, null, title, 'Back');
 	}
 	else
 	{
