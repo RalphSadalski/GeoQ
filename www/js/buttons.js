@@ -1,62 +1,10 @@
 $(document).ready(function() {
+	
+	document.getElementById('toOptions').addEventListener('click', toOptions);
+	document.getElementById('toCreate').addEventListener('click', toCreate);
 
-	//document.getElementById('toOptions').addEventListener('click', toOptions);
-	//document.getElementById('toCreate').addEventListener('click', toCreate);
-
-	document.getElementById('toOptions').addEventListener('touchstart', toOptions);
-
-	function toOptions(e) 
-	{		
-  		e.preventDefault();
-
-		var hasClass = $('#gameWindow > #wrapper').hasClass('toOptions');
-
-		if(hasClass)
-		{
-			calcTime('#backOptions');
-
-			$('#gameWindow > #wrapper').removeClass('toOptions');
-			$('#gameWindow > #wrapper').removeClass('toCreate');
-			$('#gameWindow > #wrapper').removeClass('backCreate');
-			$('#gameWindow > #wrapper').addClass('backOptions');
-		}
-		else
-		{
-			calcTime('#toOptions');
-
-			$('#gameWindow > #wrapper').removeClass('backOptions');
-			$('#gameWindow > #wrapper').removeClass('toCreate');
-			$('#gameWindow > #wrapper').removeClass('backCreate');
-			$('#gameWindow > #wrapper').addClass('toOptions');
-		}
-	}
-
-	document.getElementById('toCreate').addEventListener('touchstart', toCreate);
-	function toCreate (e)
-	{		
-		e.preventDefault();
-
-		var hasClass = $('#gameWindow > #wrapper').hasClass('toCreate');
-
-		if(hasClass)
-		{
-			calcTime('#backCreate');
-
-			$('#gameWindow > #wrapper').removeClass('toCreate');
-			$('#gameWindow > #wrapper').removeClass('backOptions');
-			$('#gameWindow > #wrapper').removeClass('toOptions');
-			$('#gameWindow > #wrapper').addClass('backCreate');
-		}
-		else
-		{
-			calcTime('#toCreate');
-
-			$('#gameWindow > #wrapper').removeClass('backCreate');
-			$('#gameWindow > #wrapper').removeClass('backOptions');
-			$('#gameWindow > #wrapper').removeClass('toOptions');
-			$('#gameWindow > #wrapper').addClass('toCreate');
-		}
-	}
+	//document.getElementById('toOptions').addEventListener('touchstart', ‚toOptions);
+	//document.getElementById('toCreate').addEventListener('touchstart', toCreate);
 
 	$('#reloadView').on('click', function ()
 	{
@@ -231,6 +179,58 @@ $(document).ready(function() {
 		gameObject.endGame();
 	});
 });
+
+function toOptions(e) 
+{		
+	e.preventDefault();
+
+	var hasClass = $('#gameWindow > #wrapper').hasClass('toOptions');
+
+	if(hasClass)
+	{
+		calcTime('#backOptions');
+
+		$('#gameWindow > #wrapper').removeClass('toOptions');
+		$('#gameWindow > #wrapper').removeClass('toCreate');
+		$('#gameWindow > #wrapper').removeClass('backCreate');
+		$('#gameWindow > #wrapper').addClass('backOptions');
+	}
+	else
+	{
+		calcTime('#toOptions');
+
+		$('#gameWindow > #wrapper').removeClass('backOptions');
+		$('#gameWindow > #wrapper').removeClass('toCreate');
+		$('#gameWindow > #wrapper').removeClass('backCreate');
+		$('#gameWindow > #wrapper').addClass('toOptions');
+	}
+}
+
+function toCreate (e)
+{		
+	e.preventDefault();
+
+	var hasClass = $('#gameWindow > #wrapper').hasClass('toCreate');
+
+	if(hasClass)
+	{
+		calcTime('#backCreate');
+
+		$('#gameWindow > #wrapper').removeClass('toCreate');
+		$('#gameWindow > #wrapper').removeClass('backOptions');
+		$('#gameWindow > #wrapper').removeClass('toOptions');
+		$('#gameWindow > #wrapper').addClass('backCreate');
+	}
+	else
+	{
+		calcTime('#toCreate');
+
+		$('#gameWindow > #wrapper').removeClass('backCreate');
+		$('#gameWindow > #wrapper').removeClass('backOptions');
+		$('#gameWindow > #wrapper').removeClass('toOptions');
+		$('#gameWindow > #wrapper').addClass('toCreate');
+	}
+}
 
 function quitGameView()
 {

@@ -2,15 +2,21 @@ var viewManager = {
 	initialize: function ()
 	{
 		this.ListView();
+<<<<<<< HEAD
 		
 		document.addEventListener("deviceready", onDeviceReady, false);
+=======
+>>>>>>> update
 	},
 	
 	ListView : function ()
 	{
 		this.loadView('ListView.html');
+<<<<<<< HEAD
 		
 		alert('ListView');
+=======
+>>>>>>> update
 	},
 	
 	loadView : function (localURL)
@@ -67,4 +73,8 @@ var viewManager = {
 			calcTime('loadView: "' + localURL + '" from localStorage, Duration: ' + duration + ' ms');
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> update

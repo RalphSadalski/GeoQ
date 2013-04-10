@@ -150,3 +150,24 @@ function showAlert (message)
 		alert(title ? (title + ": " + message) : message);
 	}
 }
+<<<<<<< HEAD
+=======
+/*
+	BIG FUNCTION FOR LOGGING ALL IMPORTENT THINGS
+*/
+var starttime 	= 0;
+var logging	= new Array();
+
+function calcTime(msg)
+{
+	var now = new Date();
+
+	var d = (now - starttime) / 1000;
+
+	console.log(d + ' - ' + msg);
+
+	var log = {'time' : d, 'msg' : msg};
+
+	logging.push(log);
+}
+>>>>>>> update
