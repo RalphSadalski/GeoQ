@@ -14,9 +14,7 @@ var map = {
 		$('body').append('<canvas id="visir" class="visir" width="500" height="500" style="display:none;"></canvas>');
 		$('body').append('<div id="flag"><icon>2</icon></div><div id="userflag" style="display:none"><icon>2</icon></div>');
 		$('body').append('<div id="questionBox"></div>');
-		$('body').append('<div id="gameNav"><button id="BackToGameView"><icon>T</icon><div>Back</div></button>');
-		$('body').append('<button id="showAnswer"><icon>u</icon><div>Show Answer</div></button>');
-		$('body').append('<button id="NextQuestion"><icon>H</icon><div>Next</div></button></div>');
+		$('body').append('<div id="gameNav"><button id="BackToGameView"><icon>T</icon><div>Back</div></button><button id="showAnswer"><icon>u</icon><div>Show Answer</div></button><button id="NextQuestion"><icon>H</icon><div>Next</div></button></div>');
 		$('body').append('<div id="map" class="worldmap"></div>');
 		
 		$('#map').prepend('<img id="worldmap" class="worldmap" style="display:none" src="' + this.maps[0] + '" />');
